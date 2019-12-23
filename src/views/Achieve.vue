@@ -1,32 +1,36 @@
 <template>
   <div class="view achive">
     <div class="achive__row">
-      <tappable
-        class="achive__icon"
-        :disabled="!achive.completed.is_achieved"
-        @click="check('completed')"
-      >🎓</tappable>
-      <tappable
-        class="achive__icon"
-        :disabled="!achive.start.is_achieved"
-        @click="check('start')"
-      >🎬</tappable>
-      <tappable
-        class="achive__icon"
-        :disabled="!achive.clever.is_achieved"
-        @click="check('clever')"
-      >📚</tappable>
-      <tappable class="achive__icon" :disabled="!achive.bot.is_achieved" @click="check('bot')">🏷️</tappable>
-      <tappable
-        class="achive__icon"
-        :disabled="!achive.month.is_achieved"
-        @click="check('month')"
-      >📅</tappable>
-      <tappable
-        class="achive__icon"
-        :disabled="!achive.notified.is_achieved"
-        @click="check('notified')"
-      >🔥</tappable>
+      <div class="achive__column">
+        <tappable
+          class="achive__icon"
+          :disabled="!achive.completed.is_achieved"
+          @click="check('completed')"
+        >🎓</tappable>
+        <tappable
+          class="achive__icon"
+          :disabled="!achive.start.is_achieved"
+          @click="check('start')"
+        >🎬</tappable>
+        <tappable
+          class="achive__icon"
+          :disabled="!achive.clever.is_achieved"
+          @click="check('clever')"
+        >📚</tappable>
+      </div>
+      <div class="achive__column">
+        <tappable class="achive__icon" :disabled="!achive.bot.is_achieved" @click="check('bot')">🏷️</tappable>
+        <tappable
+          class="achive__icon"
+          :disabled="!achive.month.is_achieved"
+          @click="check('month')"
+        >📅</tappable>
+        <tappable
+          class="achive__icon"
+          :disabled="!achive.notified.is_achieved"
+          @click="check('notified')"
+        >🔥</tappable>
+      </div>
     </div>
     <transition name="fade">
       <keep-alive>
