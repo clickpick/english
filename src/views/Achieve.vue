@@ -5,50 +5,28 @@
         class="achive__icon"
         :disabled="!achive.completed.is_achieved"
         @click="check('completed')"
-      >
-        🎓
-        <span class="achive__name  achive__name--small">{{achive.completed.name}}</span>
-      </tappable>
+      >🎓</tappable>
       <tappable
         class="achive__icon"
         :disabled="!achive.start.is_achieved"
         @click="check('start')"
-      >
-        🎬
-        <span class="achive__name  achive__name--small">{{achive.start.name}}</span>
-      </tappable>
+      >🎬</tappable>
       <tappable
         class="achive__icon"
         :disabled="!achive.clever.is_achieved"
         @click="check('clever')"
-      >
-        📚
-        <span class="achive__name  achive__name--small">{{achive.clever.name}}</span>
-      </tappable>
-      <tappable
-        class="achive__icon"
-        :disabled="!achive.bot.is_achieved"
-        @click="check('bot')"
-      >
-        🏷️
-        <span class="achive__name  achive__name--small">{{achive.bot.name}}</span>
-      </tappable>
+      >📚</tappable>
+      <tappable class="achive__icon" :disabled="!achive.bot.is_achieved" @click="check('bot')">🏷️</tappable>
       <tappable
         class="achive__icon"
         :disabled="!achive.month.is_achieved"
         @click="check('month')"
-      >
-        📅
-        <span class="achive__name  achive__name--small">{{achive.month.name}}</span>
-      </tappable>
+      >📅</tappable>
       <tappable
         class="achive__icon"
         :disabled="!achive.notified.is_achieved"
         @click="check('notified')"
-      >
-        🔥
-        <span class="achive__name  achive__name--small">{{achive.notified.name}}</span>
-      </tappable>
+      >🔥</tappable>
     </div>
     <transition name="fade">
       <keep-alive>
@@ -136,16 +114,6 @@ export default {
   &__name {
     font-size: 14pt;
     margin-bottom: 4px;
-
-    &--small {
-      display: inline-block;
-
-      min-height: 36px;
-      margin-top: 10px;
-
-      font-size: 11pt;
-      color: #fff;
-    }
   }
 
   &__description {
@@ -153,43 +121,70 @@ export default {
     font-weight: 300;
   }
 
-  &__row {
+  &__row,
+  &__column {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: stretch;
+  }
+
+  &__row {
+    flex-direction: row;
+
+    min-height: calc(100vh - 92px);
+    min-height: calc(
+      100vh - 92px - var(--safe-area-inset-top) - var(--safe-area-inset-bottom)
+    );
+    @media (min-width: 530px) {
+      min-height: calc(100vh - 136px);
+      min-height: calc(
+        100vh - 136px - var(--safe-area-inset-top) -
+          var(--safe-area-inset-bottom)
+      );
+    }
+  }
+
+  &__column {
+    flex-direction: column;
+  }
+
+  &__column {
+    &:first-child {
+      margin-bottom: 48px;
+      margin-right: 8px;
+    }
+
+    &:last-child {
+      margin-top: 48px;
+      margin-left: 8px;
+    }
   }
 
   &__icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    width: 33%;
-    @media (max-width: 375px) {
-      width: 50%;
+    font-size: calc(48vw - 60px);
+    @media (min-width: 530px) {
+      font-size: calc(48vw - 104px);
     }
-
     margin: 16px 0;
 
-    font-size: 90px;
-
     filter: grayscale(1) brightness(0.6);
-    transition: all 0.3s ease;
+    transition: filter 0.3s ease;
 
     &:not(:disabled) {
       filter: grayscale(0) brightness(1);
     }
-
-    &__name {
-      font-size: 13px;
-    }
   }
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
 
