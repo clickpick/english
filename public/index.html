@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no,viewport-fit=cover">
+  <title>click.лингвист</title>
+  <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+  <script>eruda.init();</script> -->
+  <style>
+    :root {
+      --safe-area-inset-top: 20px;
+      --safe-area-inset-bottom: 0px;
+    }
+
+    @supports (padding-top: constant(safe-area-inset-top)) {
+      :root {
+        --safe-area-inset-top: constant(safe-area-inset-top);
+        --safe-area-inset-bottom: constant(safe-area-inset-bottom);
+      }
+    }
+
+    @supports (padding-top: env(safe-area-inset-top)) {
+      :root {
+        --safe-area-inset-top: env(safe-area-inset-top);
+        --safe-area-inset-bottom: env(safe-area-inset-bottom);
+      }
+    }
+  </style>
+  <style>
+    :after,
+    :before,
+    article,
+    aside,
+    b,
+    body,
+    div,
+    footer,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header,
+    label,
+    li,
+    nav,
+    ol,
+    p,
+    pre,
+    section,
+    small,
+    span,
+    ul {
+        -webkit-highlight: none;
+        -webkit-overflow-scrolling: touch;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-text-decorations-in-effect: none;
+        -webkit-user-drag: none;
+        -webkit-app-region: no-drag;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    input,
+    textarea {
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        user-select: text;
+    }
+
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button,
+    input::-webkit-search-cancel-button,
+    input::-webkit-search-decoration,
+    input::-webkit-search-results-button,
+    input::-webkit-search-results-decoration {
+        display: none;
+    }
+
+    :after,
+    :before,
+    a,
+    article,
+    aside,
+    b,
+    body,
+    button,
+    div,
+    footer,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header,
+    img,
+    input,
+    label,
+    li,
+    nav,
+    ol,
+    option,
+    p,
+    pre,
+    section,
+    select,
+    small,
+    span,
+    textarea,
+    ul {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        vertical-align: baseline;
+        box-sizing: border-box;
+        cursor: default;
+    }
+
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    [type="button"],
+    a,
+    button,
+    input,
+    option,
+    select,
+    textarea {
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    [role="button"]:focus,
+    [tabindex]:focus,
+    a:focus,
+    button:focus,
+    input:focus,
+    option:focus,
+    select:focus,
+    textarea:focus {
+        outline: 0;
+    }
+
+    [role="button"],
+    [tabindex],
+    a,
+    button,
+    img,
+    option,
+    select {
+        -webkit-user-drag: none;
+        -webkit-app-region: no-drag;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    button[disabled],
+    input[disabled],
+    option[disabled],
+    select[disabled],
+    textarea[disabled] {
+        pointer-events: none;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    select {
+        display: block;
+        color: #fff;
+        width: 100%;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background: transparent;
+    }
+
+    html[theme="light"] select {
+        color: #212121;
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+    option {
+        color: #fff;
+        background: #2c2d2e;
+    }
+
+    html[theme="light"] option {
+        color: #212121;
+        background: #fff;
+    }
+
+    html {
+        cursor: default;
+        -moz-tab-size: 1;
+        tab-size: 1;
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "SF Pro",
+            "Google Sans", "Noto Sans", Roboto, "Droid Sans", "Open Sans",
+            "Helvetica Neue", sans-serif, "Apple Color Emoji", "Android Emoji",
+            EmojiSymbols, "Segoe UI Emoji";
+        line-height: 1.2;
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+        -webkit-highlight: none;
+        -webkit-overflow-scrolling: touch;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-text-decorations-in-effect: none;
+        text-rendering: geometricPrecision;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: none;
+        position: relative;
+        padding: 0;
+        padding: var(--safe-area-inset-top) 0 var(--safe-area-inset-bottom) 0;
+    }
+
+    html,
+    body {
+        transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        transition: transform 0.3s ease, background-color 0.3s ease, -webkit-transform 0.3s ease;
+        background-color: #202122;
+        color: #fff;
+    }
+
+    html[theme="light"],
+    html[theme="light"] body {
+        background-color: #fff;
+        color: #767676;
+    }
+
+    html,
+    body,
+    #app {
+        height: 100%;
+    }
+
+    html {
+        overflow: hidden;
+    }
+
+    @-webkit-keyframes round_spinner {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes round_spinner {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    #app {
+        padding: 22px;
+        overflow-x: visible;
+    }
+
+    @media (min-width: 530px) {
+        #app {
+            padding: 44px;
+        }
+    }
+
+    .custom-scroll {
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        scrollbar-size: thin;
+        scrollbar-color: #ffffff #202122;
+    }
+
+    .custom-scroll::-webkit-scrollbar {
+        height: 8px;
+        width: 8px;
+        background: #202122;
+    }
+
+    .custom-scroll::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .custom-scroll::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+    }
+
+    .custom-scroll::-webkit-scrollbar-thumb {
+        background: #2a2b2c;
+    }
+
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+        background: #ffffff;
+    }
+
+    .custom-scroll::-webkit-scrollbar-thumb:vertical {
+        min-height: 48px;
+    }
+
+    .custom-scroll::-webkit-scrollbar-thumb:horizontal {
+        min-width: 48px;
+    }
+
+    .should-animate-ready {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+
+    .animate-ready {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    .animate-reset {
+        -webkit-transform: none;
+        transform: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div id="loader"></div>
+  </div>
+</body>
+
+</html>

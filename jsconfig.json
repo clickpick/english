@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "experimentalDecorators": true,
+    "reactNamespace": "h",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ],
+      "@/*": [
+        "./src/*"
+      ],
+      "~~/*": [
+        "./src/*"
+      ],
+      "@@/*": [
+        "./src/*"
+      ]
+    }
+  }
+}

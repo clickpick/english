@@ -1,0 +1,40 @@
+{
+  "name": "english",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy": "yarn build && vk-miniapps-deploy",
+    "proxy": "ssh -vnNT -R 3001:localhost:1024 forge@dev.ezavalishin.ru"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.4.1",
+    "@vkontakte/vk-mini-apps-api": "^0.3.0",
+    "axios": "^0.19.0",
+    "axios-retry": "^3.1.2",
+    "core-js": "^3.6.0",
+    "date-fns": "^2.8.1",
+    "flatted": "^2.0.1",
+    "lodash-es": "^4.17.15",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.3",
+    "vuex": "^3.1.2",
+    "vuex-persist": "^2.2.0"
+  },
+  "devDependencies": {
+    "@vkontakte/vk-miniapps-deploy": "^0.0.10",
+    "@vue/cli-plugin-babel": "^4.1.1",
+    "@vue/cli-plugin-eslint": "^4.1.1",
+    "@vue/cli-plugin-router": "^4.1.1",
+    "@vue/cli-plugin-vuex": "^4.1.1",
+    "@vue/cli-service": "^4.1.1",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.0.1",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.6.11"
+  }
+}

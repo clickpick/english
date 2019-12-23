@@ -1,0 +1,174 @@
+html, body {
+    background-color: #fff;
+    color: #767676;
+}
+
+/* .card {
+    background-color: #d4d5d5;
+    color: #000;
+}
+
+.card__body {
+    color: #000;
+}
+
+.tabbar {
+    background-color: #d4d5d5;
+}
+
+.tabbar:before {
+    background-color: #ccc;
+}
+
+.tabbar__item {
+    color: #767676;
+}
+
+.tabbar__item--selected {
+    color: #000;
+} */
+
+.card {
+    background-color: #ebedf0;
+    color:  black;
+}
+
+.card__body {
+    color: #000;
+}
+
+.tabbar {
+    background-color: #ebedf0;
+}
+
+.tabbar:before {
+    background-color: #d7d8d9;
+}
+
+.tabbar__item {
+    color: #99a2ad;
+}
+
+.tabbar__item--selected {
+    color: #000;
+}
+
+
+
+
+/* */
+
+
+html, body {
+    background-color: #fff;
+    color: #767676;
+}
+
+/* .card {
+    background-color: #d4d5d5;
+    color: #000;
+}
+
+.card__body {
+    color: #000;
+}
+
+.tabbar {
+    background-color: #d4d5d5;
+}
+
+.tabbar:before {
+    background-color: #ccc;
+}
+
+.tabbar__item {
+    color: #767676;
+}
+
+.tabbar__item--selected {
+    color: #000;
+} */
+
+.card {
+    background-color: #f6f7f8;
+    color:  black;
+}
+
+.card__body {
+    color: #000;
+}
+
+.tabbar {
+    background-color: #fff;
+}
+
+.tabbar:before {
+    background-color: #fafafa;
+}
+
+.tabbar__item {
+    color: hsla(210, 2%, 70%, 1);
+}
+
+.tabbar__item--selected {
+    color: #000;
+}
+
+/** */
+
+html, body {
+    background-color: #fff;
+    color: #767676;
+}
+
+/* .card {
+    background-color: #d4d5d5;
+    color: #000;
+}
+
+.card__body {
+    color: #000;
+}
+
+.tabbar {
+    background-color: #d4d5d5;
+}
+
+.tabbar:before {
+    background-color: #ccc;
+}
+
+.tabbar__item {
+    color: #767676;
+}
+
+.tabbar__item--selected {
+    color: #000;
+} */
+
+.card {
+    background-color: #f6f7f8;
+    color:  black;
+}
+
+.card__body {
+    color: #000;
+}
+
+.tabbar {
+    background-color: #fff;
+}
+
+.tabbar:before {
+    background-color: #fafafa;
+    opacity: 0;
+}
+
+.tabbar__item {
+    color: hsla(210, 2%, 70%, 1);
+}
+
+.tabbar__item--selected {
+    color: #000;
+}
+
